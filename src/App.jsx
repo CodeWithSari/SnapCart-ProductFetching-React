@@ -8,6 +8,8 @@ import Products from './Pages/Products'
 import ViewProducts from './Pages/ViewProducts'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
+import Cart from './Pages/Cart';
+import Wishlist from './Pages/Wishlist';
 import Pnf from './Pages/Pnf'
 
 function App() {
@@ -26,6 +28,9 @@ function App() {
           {/* Add these new routes */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+<Route path="/wishlist" element={<Wishlist />} />
+
           <Route path="*" element={<Pnf />} />
         </Routes>
       </main>
