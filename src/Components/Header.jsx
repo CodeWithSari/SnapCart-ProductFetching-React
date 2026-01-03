@@ -44,7 +44,7 @@ function Header() {
               Products
             </Link>
 
-            {/* ❤️ Wishlist */}
+            {/* Wishlist */}
             <Link to="/wishlist" className="nav-link position-relative" style={{ color: "#f66aabff" }}>
               <FaHeart size={18} />
               {wishlistCount > 0 && (
@@ -58,7 +58,7 @@ function Header() {
               )}
             </Link>
 
-            {/* 🛒 Cart */}
+            {/* Cart */}
             <Link to="/cart" className="nav-link position-relative" style={{ color: "#f66aabff" }}>
               <FaShoppingCart size={18} />
               {cartCount > 0 && (

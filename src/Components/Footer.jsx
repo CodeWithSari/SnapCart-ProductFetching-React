@@ -5,7 +5,7 @@ function Footer() {
     <footer
       className="text-white text-center py-3 mt-auto"
       style={{
-               background: "linear-gradient(90deg, #340357ff, #4B0082)", // peach → violet gradient
+               background: "linear-gradient(90deg, #340357ff, #4B0082)", 
  
       }}
     >

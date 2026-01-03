@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaShoppingCart, FaRupeeSign, FaStar  } from "react-icons/fa";
+import { BsCartX, BsCartCheck } from "react-icons/bs";
 import { removeFromCart } from "../redux/slices/cartSlice";
 
 function Cart() {
@@ -14,10 +15,16 @@ function Cart() {
 
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4">🛒 Your Cart</h2>
+      <h2 className="text-center mb-4">
+        <FaShoppingCart className="me-2 text-success" />
+        Your Cart
+      </h2>
 
       {cartItems.length === 0 ? (
-        <p className="text-center text-muted">Your cart is empty</p>
+        <div className="text-center text-muted mt-5">
+          <BsCartX size={60} className="mb-3" />
+          <p>Your cart is empty</p>
+        </div>
       ) : (
         <>
           <div className="row">
@@ -35,7 +42,8 @@ function Cart() {
                     <h5 className="card-title">{item.title}</h5>
 
                     <p className="fw-bold text-success mt-auto">
-                      ₹ {item.price}
+                      <FaRupeeSign className="me-1" />
+                      {item.price}
                     </p>
 
                     <div className="d-flex justify-content-between align-items-center mt-1">
@@ -43,8 +51,10 @@ function Cart() {
                         {item.category}
                       </span>
                       <span className="text-warning">
-                        ⭐ {item.rating}
+                      <FaStar className="me-1" />
+                      {item.rating}
                       </span>
+
                     </div>
 
                     <button
@@ -53,7 +63,8 @@ function Cart() {
                         dispatch(removeFromCart(item.id))
                       }
                     >
-                      <FaTrash /> Remove
+                      <FaTrash className="me-2" />
+                      Remove
                     </button>
                   </div>
                 </div>
@@ -64,12 +75,14 @@ function Cart() {
           <h4 className="text-end mt-4">
             Total:{" "}
             <span className="text-success">
-              ₹ {totalPrice}
+              <FaRupeeSign className="me-1" />
+              {totalPrice}
             </span>
           </h4>
 
           <div className="text-end mt-3">
             <button className="btn btn-success px-4">
+              <BsCartCheck className="me-2" />
               Checkout
             </button>
           </div>
