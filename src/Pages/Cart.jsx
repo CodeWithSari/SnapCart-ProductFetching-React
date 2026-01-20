@@ -76,7 +76,7 @@ function Cart() {
             Total:{" "}
             <span className="text-success">
               <FaRupeeSign className="me-1" />
-              {totalPrice}
+                {totalPrice.toFixed(2)}
             </span>
           </h4>
 
