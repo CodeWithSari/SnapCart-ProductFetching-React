@@ -24,4 +24,5 @@ Tech Stack
 - React Icons
 
 Purpose
+
 This project is created to practice Redux concepts and real-world state management in React.
